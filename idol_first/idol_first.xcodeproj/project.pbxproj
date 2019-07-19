@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005031CEDA612CBAC33AA733 /* libPods-idol_first.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F345CC2C95DBC83F184802D0 /* libPods-idol_first.a */; };
 		524AAAAC223DF5B6000AFB7C /* tab.m in Sources */ = {isa = PBXBuildFile; fileRef = 524AAAAB223DF5B6000AFB7C /* tab.m */; };
 		529863D7223A5ACB009023DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529863D6223A5ACB009023DC /* Assets.xcassets */; };
 		52A6BB0D222E39E3008CBFFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A6BB0C222E39E3008CBFFA /* AppDelegate.m */; };
@@ -54,6 +55,9 @@
 		52A6BB2B222E39E4008CBFFA /* idol_firstUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idol_firstUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A6BB2F222E39E4008CBFFA /* idol_firstUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = idol_firstUITests.m; sourceTree = "<group>"; };
 		52A6BB31222E39E4008CBFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820EE90C1ACBEEE1B9F47DE7 /* Pods-idol_first.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idol_first.release.xcconfig"; path = "Target Support Files/Pods-idol_first/Pods-idol_first.release.xcconfig"; sourceTree = "<group>"; };
+		E6EA15A0BB63C2F473910A36 /* Pods-idol_first.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idol_first.debug.xcconfig"; path = "Target Support Files/Pods-idol_first/Pods-idol_first.debug.xcconfig"; sourceTree = "<group>"; };
+		F345CC2C95DBC83F184802D0 /* libPods-idol_first.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-idol_first.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005031CEDA612CBAC33AA733 /* libPods-idol_first.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0485CFF75A74A1B1410820C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F345CC2C95DBC83F184802D0 /* libPods-idol_first.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CE8F398AB657DD5ACBACF14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6EA15A0BB63C2F473910A36 /* Pods-idol_first.debug.xcconfig */,
+				820EE90C1ACBEEE1B9F47DE7 /* Pods-idol_first.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		52A6BAFF222E39E2008CBFFA = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +111,8 @@
 				52A6BB23222E39E4008CBFFA /* idol_firstTests */,
 				52A6BB2E222E39E4008CBFFA /* idol_firstUITests */,
 				52A6BB09222E39E3008CBFFA /* Products */,
+				0CE8F398AB657DD5ACBACF14 /* Pods */,
+				0485CFF75A74A1B1410820C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +169,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52A6BB34222E39E4008CBFFA /* Build configuration list for PBXNativeTarget "idol_first" */;
 			buildPhases = (
+				A939F5DECC55EA35D42C906C /* [CP] Check Pods Manifest.lock */,
 				52A6BB04222E39E3008CBFFA /* Sources */,
 				52A6BB05222E39E3008CBFFA /* Frameworks */,
 				52A6BB06222E39E3008CBFFA /* Resources */,
@@ -261,6 +287,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A939F5DECC55EA35D42C906C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-idol_first-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52A6BB04222E39E3008CBFFA /* Sources */ = {
@@ -439,6 +490,7 @@
 		};
 		52A6BB35222E39E4008CBFFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6EA15A0BB63C2F473910A36 /* Pods-idol_first.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +508,7 @@
 		};
 		52A6BB36222E39E4008CBFFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 820EE90C1ACBEEE1B9F47DE7 /* Pods-idol_first.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
